@@ -46,6 +46,7 @@ function Index() {
           <nav className="hidden gap-8 text-sm md:flex">
             <a href="#collection" className="hover:text-pink transition">Collection</a>
             <a href="#story" className="hover:text-pink transition">Our Story</a>
+            <Link to="/blog/eid-goodie-bag-ideas" className="hover:text-pink transition">Blog</Link>
             <a href="#contact" className="hover:text-pink transition">Contact</a>
           </nav>
           <button onClick={() => setOrderOpen(true)} className="rounded-full bg-pink px-5 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90">

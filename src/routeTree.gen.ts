@@ -10,33 +10,43 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as BlogEidGoodieBagIdeasRouteImport } from './routes/blog.eid-goodie-bag-ideas'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogEidGoodieBagIdeasRoute = BlogEidGoodieBagIdeasRouteImport.update({
+  id: '/blog/eid-goodie-bag-ideas',
+  path: '/blog/eid-goodie-bag-ideas',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blog/eid-goodie-bag-ideas': typeof BlogEidGoodieBagIdeasRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blog/eid-goodie-bag-ideas': typeof BlogEidGoodieBagIdeasRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blog/eid-goodie-bag-ideas': typeof BlogEidGoodieBagIdeasRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/blog/eid-goodie-bag-ideas'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/blog/eid-goodie-bag-ideas'
+  id: '__root__' | '/' | '/blog/eid-goodie-bag-ideas'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogEidGoodieBagIdeasRoute: typeof BlogEidGoodieBagIdeasRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,12 +58,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/eid-goodie-bag-ideas': {
+      id: '/blog/eid-goodie-bag-ideas'
+      path: '/blog/eid-goodie-bag-ideas'
+      fullPath: '/blog/eid-goodie-bag-ideas'
+      preLoaderRoute: typeof BlogEidGoodieBagIdeasRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogEidGoodieBagIdeasRoute: BlogEidGoodieBagIdeasRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}
