@@ -42,11 +42,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "QT Designs — Bespoke Stickers & Eid Gifting" },
-      { name: "description", content: "Handcrafted personalized stickers, gift boxes and Eid favours by QT Designs." },
-      { property: "og:title", content: "QT Designs — Bespoke Stickers & Eid Gifting" },
-      { property: "og:description", content: "Handcrafted personalized stickers, gift boxes and Eid favours." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "QT Designs" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

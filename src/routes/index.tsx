@@ -11,6 +11,12 @@ export const Route = createFileRoute("/")({
     meta: [
       { title: "QT Designs — Bespoke Stickers & Eid Gifting" },
       { name: "description", content: "Handcrafted personalized stickers, gift boxes and Eid favours by QT Designs." },
+      { property: "og:title", content: "QT Designs — Bespoke Stickers & Eid Gifting" },
+      { property: "og:description", content: "Handcrafted personalized stickers, gift boxes and Eid favours by QT Designs." },
+      { property: "og:url", content: "https://qtstickers.lovable.app/" },
+    ],
+    links: [
+      { rel: "canonical", href: "https://qtstickers.lovable.app/" },
     ],
   }),
   component: Index,
