@@ -166,6 +166,48 @@ function Index() {
         </div>
       </section>
 
+      {/* Blog */}
+      <section className="border-t border-border/40 py-24">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="mb-14 flex items-end justify-between gap-6">
+            <div>
+              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-pink">From the Blog</p>
+              <h2 className="font-display text-4xl md:text-5xl">Gifting inspiration.</h2>
+            </div>
+            <p className="hidden max-w-sm text-muted-foreground md:block">Tips, checklists, and theme ideas to make every Eid celebration unforgettable.</p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <Link to="/blog/eid-goodie-bag-ideas" className="group col-span-2 lg:col-span-2">
+              <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-[var(--shadow-card)]">
+                <div className="grid md:grid-cols-2">
+                  <div className="relative aspect-[4/3] md:aspect-auto overflow-hidden">
+                    <img src={favors} alt="Eid favour boxes arranged on a table" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                  </div>
+                  <div className="flex flex-col justify-center p-8 md:p-10">
+                    <p className="text-xs uppercase tracking-[0.2em] text-pink">Guide</p>
+                    <h3 className="mt-3 font-display text-2xl md:text-3xl leading-tight">Eid Goodie Bag Ideas: What to Put Inside</h3>
+                    <p className="mt-4 text-muted-foreground">A complete checklist of treats, tasbeeh, bookmarks, and personalized keepsakes — plus theme ideas to make every bag feel bespoke.</p>
+                    <span className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-pink group-hover:underline">
+                      Read the guide →
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </Link>
+
+            <div className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] flex flex-col justify-center">
+              <Crescent className="h-8 w-8 text-pink" />
+              <h3 className="mt-4 font-display text-2xl">Want more ideas?</h3>
+              <p className="mt-3 text-muted-foreground">We're always sharing new themes, colour palettes, and packaging tricks. Follow us or send a message and we'll share our latest lookbook.</p>
+              <Link to="/blog/eid-goodie-bag-ideas" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-pink hover:underline">
+                Browse guides →
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section id="contact" className="border-t border-border/40 py-24">
         <div className="mx-auto max-w-4xl px-6 text-center">
