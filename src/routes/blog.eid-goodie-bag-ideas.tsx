@@ -29,10 +29,10 @@ const checklistItems = [
 ];
 
 const themeIdeas = [
-  { name: "Pink & Gold Princess", items: "Pink favour box, gold-foil bookmark, mini tiara magnet, pink tasbeeh" },
-  { name: "Midnight Blue Mosque", items: "Navy box, silver crescent magnet, blue tasbeeh, moon-phase bookmark" },
+  { name: "Pink & Gold Princess", items: "Pink favour box, gold-foil bookmark, mini tiara magnet, pink ribbon" },
+  { name: "Midnight Blue Mosque", items: "Navy box, silver crescent magnet, navy ribbon, moon-phase bookmark" },
   { name: "Botanical Eid Garden", items: "Sage box, floral label, leaf-shaped bookmark, honey jar" },
-  { name: "Classic Black & Gold", items: "Luxe crescent box, black tasbeeh, gold bookmark, mini candle" },
+  { name: "Classic Black & Gold", items: "Luxe crescent box, black ribbon, gold bookmark, mini candle" },
 ];
 
 function EidGoodieBagIdeas() {
