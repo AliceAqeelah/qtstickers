@@ -5,9 +5,9 @@ export const Route = createFileRoute("/blog/eid-goodie-bag-ideas")({
   head: () => ({
     meta: [
       { title: "Eid Goodie Bag Ideas — What to Put Inside + Checklist | QT Designs" },
-      { name: "description", content: "Looking for Eid goodie bag ideas? Discover what to put inside Eid gift bags, from treats and tasbeeh to personalized bookmarks. Plus a free printable checklist." },
+      { name: "description", content: "Looking for Eid goodie bag ideas? Discover what to put inside Eid gift bags, from treats to personalized bookmarks. Plus a free printable checklist." },
       { property: "og:title", content: "Eid Goodie Bag Ideas — What to Put Inside + Checklist | QT Designs" },
-      { property: "og:description", content: "Looking for Eid goodie bag ideas? Discover what to put inside Eid gift bags, from treats and tasbeeh to personalized bookmarks." },
+      { property: "og:description", content: "Looking for Eid goodie bag ideas? Discover what to put inside Eid gift bags, from treats to personalized bookmarks." },
       { property: "og:type", content: "article" },
       { name: "article:published_time", content: new Date().toISOString() },
     ],
