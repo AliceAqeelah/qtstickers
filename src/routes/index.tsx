@@ -202,8 +202,8 @@ function Index() {
               </div>
             </Link>
 
-            <div className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] flex flex-col justify-center">
-              <img src={qtLogo} alt="" className="h-12 w-auto" />
+            <div className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] flex flex-col justify-center items-center text-center">
+              <img src={qtLogo} alt="" className="h-20 w-auto max-w-full object-contain" />
               <h3 className="mt-4 font-display text-2xl">Want more ideas?</h3>
               <p className="mt-3 text-muted-foreground">We're always sharing new themes, colour palettes, and packaging tricks. Follow us or send a message and we'll share our latest lookbook.</p>
               <Link to="/blog/eid-goodie-bag-ideas" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-pink hover:underline">
