@@ -5,9 +5,9 @@ export const Route = createFileRoute("/blog/eid-goodie-bag-ideas")({
   head: () => ({
     meta: [
       { title: "Eid Goodie Bag Ideas — What to Put Inside + Checklist | QT Designs" },
-      { name: "description", content: "Looking for Eid goodie bag ideas? Discover what to put inside Eid gift bags, from treats and tasbeeh to personalized bookmarks. Plus a free printable checklist." },
+      { name: "description", content: "Looking for Eid goodie bag ideas? Discover what to put inside Eid gift bags, from treats to personalized bookmarks. Plus a free printable checklist." },
       { property: "og:title", content: "Eid Goodie Bag Ideas — What to Put Inside + Checklist | QT Designs" },
-      { property: "og:description", content: "Looking for Eid goodie bag ideas? Discover what to put inside Eid gift bags, from treats and tasbeeh to personalized bookmarks." },
+      { property: "og:description", content: "Looking for Eid goodie bag ideas? Discover what to put inside Eid gift bags, from treats to personalized bookmarks." },
       { property: "og:type", content: "article" },
       { name: "article:published_time", content: new Date().toISOString() },
     ],
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/blog/eid-goodie-bag-ideas")({
 
 const checklistItems = [
   { title: "Sweet treats", desc: "Mini chocolates, nougat, or halal gummies — the first thing kids reach for." },
-  { title: "A tasbeeh (33 beads)", desc: "A beautiful reminder that Eid is still about dhikr and gratitude." },
+  { title: "A mini prayer bead bracelet", desc: "A beautiful reminder that Eid is still about dhikr and gratitude." },
   { title: "A personalized bookmark", desc: "Add a child's name and a short Qur'anic verse — ours are laminated and gold-foiled." },
   { title: "A mini magnet", desc: "A crescent or masjid design for the fridge — something they'll keep year-round." },
   { title: "Nutella or water-bottle label", desc: "Swap generic packaging for a label with their name in elegant script." },
@@ -29,10 +29,10 @@ const checklistItems = [
 ];
 
 const themeIdeas = [
-  { name: "Pink & Gold Princess", items: "Pink favour box, gold-foil bookmark, mini tiara magnet, pink tasbeeh" },
-  { name: "Midnight Blue Mosque", items: "Navy box, silver crescent magnet, blue tasbeeh, moon-phase bookmark" },
+  { name: "Pink & Gold Princess", items: "Pink favour box, gold-foil bookmark, mini tiara magnet, pink ribbon" },
+  { name: "Midnight Blue Mosque", items: "Navy box, silver crescent magnet, navy ribbon, moon-phase bookmark" },
   { name: "Botanical Eid Garden", items: "Sage box, floral label, leaf-shaped bookmark, honey jar" },
-  { name: "Classic Black & Gold", items: "Luxe crescent box, black tasbeeh, gold bookmark, mini candle" },
+  { name: "Classic Black & Gold", items: "Luxe crescent box, black ribbon, gold bookmark, mini candle" },
 ];
 
 function EidGoodieBagIdeas() {
@@ -161,9 +161,9 @@ function EidGoodieBagIdeas() {
           <h2 className="font-display text-3xl md:text-4xl">Frequently asked questions</h2>
           <div className="mt-8 space-y-6">
             {[
-              { q: "How many items should go in an Eid goodie bag?", a: "Three to five items is the sweet spot — one edible, one spiritual (tasbeeh or bookmark), and one decorative or practical keepsake." },
+              { q: "How many items should go in an Eid goodie bag?", a: "Three to five items is the sweet spot — one edible, one spiritual (bookmark or prayer beads), and one decorative or practical keepsake." },
               { q: "Can I personalise every single bag?", a: "Yes. Our custom labels, bookmarks, and magnets can each be printed with individual names or a single event design." },
-              { q: "What age range are these goodie bags for?", a: "We design for all ages — from toddler-friendly no-small-parts boxes to elegant adult keepsakes with candles and premium tasbeeh." },
+              { q: "What age range are these goodie bags for?", a: "We design for all ages — from toddler-friendly no-small-parts boxes to elegant adult keepsakes with candles and premium bookmarks." },
               { q: "Do you ship assembled boxes or DIY kits?", a: "Both. We can ship fully assembled and ribbon-tied favour boxes, or flat-pack kits with stickers and instructions if you prefer to pack yourself." },
             ].map((faq) => (
               <div key={faq.q} className="rounded-2xl border border-border bg-card p-6">
