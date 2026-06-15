@@ -1,4 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import qtLogo from "@/assets/qt-logo.png";
 
 export const Route = createFileRoute("/blog/eid-goodie-bag-ideas")({
   head: () => ({
@@ -16,14 +17,6 @@ export const Route = createFileRoute("/blog/eid-goodie-bag-ideas")({
   }),
   component: EidGoodieBagIdeas,
 });
-
-function Crescent({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden>
-      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
-    </svg>
-  );
-}
 
 const checklistItems = [
   { title: "Sweet treats", desc: "Mini chocolates, nougat, or halal gummies — the first thing kids reach for." },
@@ -48,9 +41,8 @@ function EidGoodieBagIdeas() {
       {/* Nav */}
       <header className="sticky top-0 z-30 backdrop-blur-md bg-background/70 border-b border-border/40">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <Link to="/" className="flex items-center gap-2">
-            <Crescent className="h-5 w-5 text-pink" />
-            <span className="font-display text-2xl tracking-wide">QT <span className="text-pink">Designs</span></span>
+          <Link to="/" className="flex items-center gap-3">
+            <img src={qtLogo} alt="QT Designs" className="h-10 w-auto" />
           </Link>
           <nav className="hidden gap-8 text-sm md:flex">
             <Link to="/" className="hover:text-pink transition">Home</Link>
@@ -69,7 +61,7 @@ function EidGoodieBagIdeas() {
         <div className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
         <div className="relative mx-auto max-w-3xl px-6 py-20 md:py-28 text-center">
           <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-pink/30 bg-pink/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-pink">
-            <Crescent className="h-3 w-3" /> Eid Gifting Guide
+            Eid Gifting Guide
           </p>
           <h1 className="font-display text-4xl md:text-6xl leading-[1.05]">
             Eid Goodie Bag Ideas:<br /><em className="text-pink not-italic">What to put inside.</em>
@@ -131,7 +123,7 @@ function EidGoodieBagIdeas() {
 
         {/* Personalization CTA */}
         <div className="mt-20 rounded-3xl border border-pink/20 bg-card p-8 md:p-12 text-center shadow-[var(--shadow-elegant)]">
-          <Crescent className="mx-auto h-8 w-8 text-pink" />
+          <img src={qtLogo} alt="" className="mx-auto h-12 w-auto" />
           <h2 className="mt-5 font-display text-3xl md:text-4xl">Make every bag personal</h2>
           <p className="mt-4 mx-auto max-w-lg text-muted-foreground">
             We design custom jar labels, bookmarks, magnets, and favour boxes that match your theme — printed with guest names, event dates, or short duas. No two bags need to look the same.
@@ -157,7 +149,7 @@ function EidGoodieBagIdeas() {
               "Label each bag with a name tag so guests feel seen before they even open it.",
             ].map((tip) => (
               <li key={tip} className="flex items-start gap-3 text-muted-foreground">
-                <Crescent className="mt-1 h-4 w-4 shrink-0 text-pink" />
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-pink" />
                 <span>{tip}</span>
               </li>
             ))}
@@ -186,7 +178,7 @@ function EidGoodieBagIdeas() {
       {/* Footer */}
       <footer className="border-t border-border/40 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
-          <div className="flex items-center gap-2"><Crescent className="h-4 w-4 text-pink" /> QT Designs © {new Date().getFullYear()}</div>
+          <div className="flex items-center gap-2"><img src={qtLogo} alt="" className="h-6 w-auto" /> QT Designs © {new Date().getFullYear()}</div>
           <div>Handmade in South Africa</div>
         </div>
       </footer>

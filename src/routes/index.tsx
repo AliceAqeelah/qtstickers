@@ -5,6 +5,7 @@ import favors from "@/assets/product-favors.jpg";
 import luxe from "@/assets/product-luxe.jpg";
 import labels from "@/assets/product-labels.jpg";
 import stand from "@/assets/product-stand.jpg";
+import qtLogo from "@/assets/qt-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -45,9 +46,8 @@ function Index() {
       {/* Nav */}
       <header className="sticky top-0 z-30 backdrop-blur-md bg-background/70 border-b border-border/40">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
-          <a href="#top" className="flex items-center gap-2">
-            <Crescent className="h-5 w-5 text-pink" />
-            <span className="font-display text-2xl tracking-wide">QT <span className="text-pink">Designs</span></span>
+          <a href="#top" className="flex items-center gap-3">
+            <img src={qtLogo} alt="QT Designs" className="h-10 w-auto" />
           </a>
           <nav className="hidden gap-8 text-sm md:flex">
             <a href="#collection" className="hover:text-pink transition">Collection</a>
@@ -66,7 +66,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl gap-12 px-6 py-20 md:grid-cols-2 md:items-center md:py-32">
           <div className="relative z-10">
             <p className="mb-6 inline-flex items-center gap-2 rounded-full border border-pink/30 bg-pink/5 px-4 py-1.5 text-xs uppercase tracking-[0.2em] text-pink">
-              <Crescent className="h-3 w-3" /> Bespoke Eid Gifting
+              Bespoke Eid Gifting
             </p>
             <h1 className="font-display text-5xl leading-[1.05] md:text-7xl">
               Stickers, favours <br/>& keepsakes <em className="text-pink not-italic">made with love.</em>
@@ -97,7 +97,7 @@ function Index() {
             </div>
             <div className="absolute -bottom-6 -left-6 hidden rounded-2xl border border-pink/30 bg-card px-5 py-4 shadow-[var(--shadow-card)] md:block">
               <div className="flex items-center gap-3">
-                <Crescent className="h-6 w-6 text-pink" />
+                <img src={qtLogo} alt="" className="h-10 w-auto" />
                 <div>
                   <div className="font-display text-lg leading-none">Eid Mubarak</div>
                   <div className="text-xs text-muted-foreground">Limited seasonal range</div>
@@ -150,7 +150,7 @@ function Index() {
             </p>
             <ul className="mt-8 space-y-3 text-sm">
               {["Personalized to every guest","Premium paper & gold foil","Made-to-order, never mass produced","Ships across South Africa"].map(t => (
-                <li key={t} className="flex items-center gap-3"><Crescent className="h-4 w-4 text-pink" />{t}</li>
+                <li key={t} className="flex items-center gap-3"><span className="h-1.5 w-1.5 rounded-full bg-pink" />{t}</li>
               ))}
             </ul>
           </div>
@@ -203,7 +203,7 @@ function Index() {
             </Link>
 
             <div className="rounded-2xl border border-border bg-card p-8 shadow-[var(--shadow-card)] flex flex-col justify-center">
-              <Crescent className="h-8 w-8 text-pink" />
+              <img src={qtLogo} alt="" className="h-12 w-auto" />
               <h3 className="mt-4 font-display text-2xl">Want more ideas?</h3>
               <p className="mt-3 text-muted-foreground">We're always sharing new themes, colour palettes, and packaging tricks. Follow us or send a message and we'll share our latest lookbook.</p>
               <Link to="/blog/eid-goodie-bag-ideas" className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-pink hover:underline">
@@ -215,9 +215,9 @@ function Index() {
       </section>
 
       {/* CTA */}
-      <section id="contact" className="border-t border-border/40 py-24">
+        <section id="contact" className="border-t border-border/40 py-24">
         <div className="mx-auto max-w-4xl px-6 text-center">
-          <Crescent className="mx-auto h-10 w-10 text-pink" />
+          <img src={qtLogo} alt="QT Designs" className="mx-auto h-16 w-auto" />
           <h2 className="mt-6 font-display text-4xl md:text-6xl">Ready to make it personal?</h2>
           <p className="mx-auto mt-6 max-w-xl text-muted-foreground">
             Tell us about your occasion, guest count and colours. We'll come
@@ -231,7 +231,7 @@ function Index() {
 
       <footer className="border-t border-border/40 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
-          <div className="flex items-center gap-2"><Crescent className="h-4 w-4 text-pink" /> QT Designs © {new Date().getFullYear()}</div>
+          <div className="flex items-center gap-2"><img src={qtLogo} alt="" className="h-6 w-auto" /> QT Designs © {new Date().getFullYear()}</div>
           <div>Handmade in South Africa</div>
         </div>
       </footer>
@@ -258,7 +258,7 @@ function OrderDialog({ onClose }: { onClose: () => void }) {
         <button onClick={onClose} className="absolute right-4 top-4 text-muted-foreground hover:text-pink" aria-label="Close">✕</button>
         {sent ? (
           <div className="py-8 text-center">
-            <Crescent className="mx-auto h-10 w-10 text-pink" />
+            <img src={qtLogo} alt="" className="mx-auto h-14 w-auto" />
             <h3 className="mt-4 font-display text-3xl">Order sent!</h3>
             <p className="mt-3 text-muted-foreground">We've opened WhatsApp — finish sending the message and we'll reply within 24 hours.</p>
             <button onClick={onClose} className="mt-6 rounded-full bg-pink px-6 py-2.5 text-primary-foreground">Close</button>
