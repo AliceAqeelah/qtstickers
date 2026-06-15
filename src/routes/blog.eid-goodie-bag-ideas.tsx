@@ -20,7 +20,7 @@ export const Route = createFileRoute("/blog/eid-goodie-bag-ideas")({
 
 const checklistItems = [
   { title: "Sweet treats", desc: "Mini chocolates, nougat, or halal gummies — the first thing kids reach for." },
-  { title: "A tasbeeh (33 beads)", desc: "A beautiful reminder that Eid is still about dhikr and gratitude." },
+  { title: "A mini prayer bead bracelet", desc: "A beautiful reminder that Eid is still about dhikr and gratitude." },
   { title: "A personalized bookmark", desc: "Add a child's name and a short Qur'anic verse — ours are laminated and gold-foiled." },
   { title: "A mini magnet", desc: "A crescent or masjid design for the fridge — something they'll keep year-round." },
   { title: "Nutella or water-bottle label", desc: "Swap generic packaging for a label with their name in elegant script." },
