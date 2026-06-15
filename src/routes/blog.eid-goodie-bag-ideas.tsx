@@ -132,7 +132,7 @@ function EidGoodieBagIdeas() {
             <Link to="/" className="rounded-full bg-pink px-8 py-3.5 font-medium text-primary-foreground shadow-[var(--shadow-elegant)] transition hover:scale-[1.02]">
               Browse the collection →
             </Link>
-            <a href="https://wa.me/27000000000" className="rounded-full border border-border px-8 py-3.5 font-medium hover:bg-secondary transition">
+            <a href="https://wa.me/27726955808" className="rounded-full border border-border px-8 py-3.5 font-medium hover:bg-secondary transition">
               WhatsApp us
             </a>
           </div>
@@ -179,7 +179,11 @@ function EidGoodieBagIdeas() {
       <footer className="border-t border-border/40 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
           <div className="flex items-center gap-2"><img src={qtLogo} alt="" className="h-6 w-auto" /> QT Designs © {new Date().getFullYear()}</div>
-          <div>Handmade in South Africa</div>
+          <div className="flex items-center gap-6">
+            <a href="tel:+27726955808" className="hover:text-pink transition">+27 72 695 5808</a>
+            <span className="hidden md:inline text-border">|</span>
+            <span>Handmade in South Africa</span>
+          </div>
         </div>
       </footer>
     </div>

@@ -232,7 +232,11 @@ function Index() {
       <footer className="border-t border-border/40 py-10">
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
           <div className="flex items-center gap-2"><img src={qtLogo} alt="" className="h-6 w-auto" /> QT Designs © {new Date().getFullYear()}</div>
-          <div>Handmade in South Africa</div>
+          <div className="flex items-center gap-6">
+            <a href="tel:+27726955808" className="hover:text-pink transition">+27 72 695 5808</a>
+            <span className="hidden md:inline text-border">|</span>
+            <span>Handmade in South Africa</span>
+          </div>
         </div>
       </footer>
 
@@ -248,7 +252,7 @@ function OrderDialog({ onClose }: { onClose: () => void }) {
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     const text = `Hi QT Designs! I'd like to place an order.%0A%0AName: ${form.name}%0AItem: ${form.item}%0AQuantity: ${form.qty}%0ANeeded by: ${form.date}%0ANotes: ${form.notes}`;
-    window.open(`https://wa.me/27000000000?text=${text}`, "_blank");
+    window.open(`https://wa.me/27726955808?text=${text}`, "_blank");
     setSent(true);
   };
 
