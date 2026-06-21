@@ -50,7 +50,7 @@ function EidGoodieBagIdeas() {
             <a href="/#collection" className="hover:text-pink transition">Collection</a>
             <a href="/#story" className="hover:text-pink transition">Our Story</a>
           </nav>
-          <Link to="/" className="rounded-full bg-pink px-5 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90">
+          <Link to="/" className="rounded-full bg-pink px-5 py-2 text-sm font-medium text-primary-foreground transition hover:bg-pink-soft">
             Order Now
           </Link>
         </div>
@@ -129,10 +129,10 @@ function EidGoodieBagIdeas() {
             We design custom jar labels, bookmarks, magnets, and favour boxes that match your theme — printed with guest names, event dates, or short duas. No two bags need to look the same.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Link to="/" className="rounded-full bg-pink px-8 py-3.5 font-medium text-primary-foreground shadow-[var(--shadow-elegant)] transition hover:scale-[1.02]">
+            <Link to="/" className="rounded-full bg-pink px-8 py-3.5 font-medium text-primary-foreground shadow-[var(--shadow-elegant)] transition hover:bg-pink-soft hover:scale-[1.02]">
               Browse the collection →
             </Link>
-            <a href="https://wa.me/27726955808" className="rounded-full border border-border px-8 py-3.5 font-medium hover:bg-secondary transition">
+            <a href="https://wa.me/27726955808" className="rounded-full border border-border px-8 py-3.5 font-medium hover:bg-pink/10 hover:border-pink/30 transition">
               WhatsApp us
             </a>
           </div>

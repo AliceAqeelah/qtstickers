@@ -55,7 +55,7 @@ function Index() {
             <Link to="/blog/eid-goodie-bag-ideas" className="hover:text-pink transition">Blog</Link>
             <a href="#contact" className="hover:text-pink transition">Contact</a>
           </nav>
-          <button onClick={() => setOrderOpen(true)} className="rounded-full bg-pink px-5 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90">
+          <button onClick={() => setOrderOpen(true)} className="rounded-full bg-pink px-5 py-2 text-sm font-medium text-primary-foreground transition hover:bg-pink-soft">
             Order Now
           </button>
         </div>
@@ -76,10 +76,10 @@ function Index() {
               keepsakes — a little detail that turns any gift into a memory.
             </p>
             <div className="mt-10 flex flex-wrap gap-4">
-              <button onClick={() => setOrderOpen(true)} className="group relative overflow-hidden rounded-full bg-pink px-8 py-4 font-medium text-primary-foreground shadow-[var(--shadow-elegant)] transition hover:scale-[1.02]">
+              <button onClick={() => setOrderOpen(true)} className="group relative overflow-hidden rounded-full bg-pink px-8 py-4 font-medium text-primary-foreground shadow-[var(--shadow-elegant)] transition hover:bg-pink-soft hover:scale-[1.02]">
                 Place an order →
               </button>
-              <a href="#collection" className="rounded-full border border-border px-8 py-4 font-medium hover:bg-secondary transition">
+              <a href="#collection" className="rounded-full border border-border px-8 py-4 font-medium hover:bg-pink/10 hover:border-pink/30 transition">
                 Browse collection
               </a>
             </div>
@@ -126,7 +126,7 @@ function Index() {
                   <img src={p.img} alt={p.name} width={800} height={1000} loading="lazy" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
                   <div className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-full bg-background/85 px-4 py-2 text-xs backdrop-blur">
                     <span className="text-pink">{p.price}</span>
-                    <button onClick={() => setOrderOpen(true)} className="text-foreground hover:text-pink">Order →</button>
+                    <button onClick={() => setOrderOpen(true)} className="text-foreground hover:text-pink-soft transition">Order →</button>
                   </div>
                 </div>
                 <h3 className="mt-5 font-display text-xl">{p.name}</h3>
@@ -223,7 +223,7 @@ function Index() {
             Tell us about your occasion, guest count and colours. We'll come
             back with a quote within 24 hours.
           </p>
-          <button onClick={() => setOrderOpen(true)} className="mt-10 rounded-full bg-pink px-10 py-4 font-medium text-primary-foreground shadow-[var(--shadow-elegant)] transition hover:scale-[1.02]">
+          <button onClick={() => setOrderOpen(true)} className="mt-10 rounded-full bg-pink px-10 py-4 font-medium text-primary-foreground shadow-[var(--shadow-elegant)] transition hover:bg-pink-soft hover:scale-[1.02]">
             Start your order
           </button>
         </div>
@@ -259,13 +259,13 @@ function OrderDialog({ onClose }: { onClose: () => void }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm" onClick={onClose}>
       <div className="relative w-full max-w-lg rounded-2xl border border-pink/20 bg-card p-8 shadow-[var(--shadow-elegant)]" onClick={(e) => e.stopPropagation()}>
-        <button onClick={onClose} className="absolute right-4 top-4 text-muted-foreground hover:text-pink" aria-label="Close">✕</button>
+        <button onClick={onClose} className="absolute right-4 top-4 text-muted-foreground hover:text-pink-soft transition" aria-label="Close">✕</button>
         {sent ? (
           <div className="py-8 text-center">
             <img src={qtLogo} alt="" className="mx-auto h-14 w-auto" />
             <h3 className="mt-4 font-display text-3xl">Order sent!</h3>
             <p className="mt-3 text-muted-foreground">We've opened WhatsApp — finish sending the message and we'll reply within 24 hours.</p>
-            <button onClick={onClose} className="mt-6 rounded-full bg-pink px-6 py-2.5 text-primary-foreground">Close</button>
+            <button onClick={onClose} className="mt-6 rounded-full bg-pink px-6 py-2.5 text-primary-foreground transition hover:bg-pink-soft">Close</button>
           </div>
         ) : (
           <>
@@ -281,7 +281,7 @@ function OrderDialog({ onClose }: { onClose: () => void }) {
                 <Field label="Needed by"><input type="date" value={form.date} onChange={(e) => setForm({ ...form, date: e.target.value })} className="w-full rounded-lg border border-border bg-background px-4 py-2.5 outline-none focus:border-pink" /></Field>
               </div>
               <Field label="Notes (names, colours, theme)"><textarea rows={3} value={form.notes} onChange={(e) => setForm({ ...form, notes: e.target.value })} className="w-full rounded-lg border border-border bg-background px-4 py-2.5 outline-none focus:border-pink" /></Field>
-              <button type="submit" className="w-full rounded-full bg-pink py-3 font-medium text-primary-foreground transition hover:opacity-90">
+              <button type="submit" className="w-full rounded-full bg-pink py-3 font-medium text-primary-foreground transition hover:bg-pink-soft">
                 Send order via WhatsApp
               </button>
             </form>
